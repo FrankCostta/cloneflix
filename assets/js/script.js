@@ -14,18 +14,3 @@ function animeScroll() {
 window.addEventListener('scroll', () => {
 	animeScroll();
 });
-
-
-btnCheck.addEventListener('click', () => {
-	const a = document.querySelectorAll('.menu a');
-	
-	if (btnCheck.checked) {
-		for(let i=0;i<a.length;i++) {
-			a[i].style.display = 'block';
-		}
-	} else {
-		for(let i=0;i<a.length;i++) {
-			a[i].style.display = 'none';
-		}
-	}
-})

@@ -36,13 +36,7 @@ a { text-decoration: none }
 	margin-left: 50px;
 }
 
-.menubar label {
-	display: none;
-}
-#checkbox {
-	display: none;
-}
-
+/* Menu desktop */
 .menu {
 	display: block;
 }
@@ -55,6 +49,38 @@ a { text-decoration: none }
 }
 .menu a:hover {
 	color: #b4b4b4;
+}
+
+/* Menu Mobile */
+.area-menu-mobile {
+	display: none;
+}
+.area-menu-mobile span {
+	color: #cecece;
+	font-size: 14px;
+	font-weight: bold;
+}
+.area-menu-mobile span:hover ~ .menu-mobile {
+	display: grid;
+	transition-delay: 1s;
+}
+
+.menu-mobile {
+	display: none;
+	position: absolute;
+	background-color: #000000e2;
+	width: 300px;
+	top: 40px;
+	left: 10vw;
+}
+.menu-mobile:hover {
+	display: grid;
+}
+.menu-mobile a {
+	margin: 20px auto;
+	color: #cecece;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .options {
@@ -135,16 +161,6 @@ a { text-decoration: none }
 .files {
 	padding-left: 3vw;
 	display: flex;
-	overflow: scroll;
- }
- .files::-webkit-scrollbar {
-	 display: none;
- }
- 
- .files img {
-	 width: 18%;
-	 padding-right: 4px;
-	 cursor: pointer;
  }
 
  /* 
@@ -152,12 +168,13 @@ a { text-decoration: none }
  */
 
  @media only screen and (max-width: 700px) {
-
 	.file-box h4 {
 		font-size: 2vw;
-		padding: 0.8vw 3vw;
-	}	
-	.files img {
-		width: 35%;
+	}
+	.menu {
+		display: none;
+	}
+	.area-menu-mobile {
+		display: block;
 	}
   }
